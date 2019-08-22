@@ -1,0 +1,118 @@
+/*功能列表*/
+.index_mod{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.index_mod>a{
+	width: 2rem;
+	text-align: center;
+	margin: 0.3rem 0 0 0;
+}
+.index_mod>a img{
+	width: 0.8rem;
+	height: 0.8rem;
+}
+.index_mod>a p{
+	font-size: 0.3rem;
+	color: black;
+	margin: 0.1rem 0 0 0;
+}
+/*今日热点*/
+.now_hot{
+	width: 100%;
+	padding: 0.24rem 0;
+
+}
+/*标题栏*/
+.now_hot_top{
+	width: 100%;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	overflow: hidden;
+}
+.now_hot_top h5{
+	display: block;
+	height: 0.6rem;
+	float: left;
+	font-size: 0.36rem;
+}
+.now_hot_top a{
+	height: 0.4rem;
+	line-height: 0.4rem;
+	margin: 0.1rem 0;
+	float: right;
+	font-size: 0.24rem;
+	color: #666;
+	padding: 0 0.2rem;
+	border-radius: 0.4rem;
+	border: 0.02rem solid #e3e3e3;
+}
+/*热点列表*/
+.now_hot_main{
+	width: 100%;
+	display: flex;
+  justify-content: space-between;
+	flex-wrap: wrap;
+}
+.now_hot_list{
+	width: 2.1rem;
+	margin: 0.2rem 0 0 0;
+}
+/*封面*/
+.hot_list_content{
+	position: relative;
+}
+.hot_list_content>img{
+	width: 2.1rem;
+	height: 2.1rem;
+	border-radius: 0.1rem;
+}
+/*浮层*/
+.hot_list_top{
+	width: 98%;
+	padding: 0 2% 0 0;
+	height: 0.4rem;
+	position: absolute;
+	font-size: 0.2rem;
+	color: white;
+	overflow: hidden;
+}
+.hot_list_top .list_top_one{
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.hot_list_top .list_top_two{
+	width: 0.24rem;
+	height: 0.24rem;
+	float: right;
+	margin: 0.08rem 0;
+}
+.hot_list_top span{
+	height: 0.4rem;
+	line-height: 0.4rem;
+	float: right;
+	margin: 0 0.02rem;
+	font-weight: bold;
+}
+.hot_list_top i{
+	height: 0.4rem;
+	line-height: 0.4rem;
+	font-style: normal;
+	float: right;
+}
+/*标题*/
+.hot_list_title{
+	width: 100%;
+	color: #333;
+	font-size: 0.28rem;
+	/*控制只显示2行，多的用省略号*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	margin: 0.1rem 0;
+	text-align: justify;
+}

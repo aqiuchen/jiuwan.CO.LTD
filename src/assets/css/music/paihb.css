@@ -1,0 +1,99 @@
+.paihb_main {
+  width: 94%;
+  padding: 1rem 3%;
+}
+
+/* 公共部分 */
+.paihb_main h5 {
+  font-size: 0.3rem;
+}
+
+.paihb_main img {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.1rem;
+}
+
+.paihb_main_bb_top {
+  width: 2.2rem;
+  height: 2.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.paihb_main_bb_top span {
+  width: 1.8rem;
+  padding: 0 0.1rem;
+  position: absolute;
+  bottom: 0.1rem;
+  color: white;
+  font-size: 0.2rem;
+}
+
+.paihb_main_bb_main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.paihb_main_bb {
+  margin-top: 0.8rem;
+}
+
+.paihb_main_bb a {
+  width: 2.2rem;
+  overflow: hidden;
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.paihb_main_bb a p {
+  width: 100%;
+  font-size: 0.28rem;
+  color: #333;
+  margin-top: 0.1rem;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 官方榜 */
+.paihb_main_gfb {
+  overflow: hidden;
+}
+
+.paihb_main_gfb a {
+  width: 100%;
+  float: left;
+  margin-top: 0.2rem;
+}
+
+.paihb_main_gfb_left {
+  float: left;
+}
+
+.paihb_main_gfb_right {
+  float: right;
+  /* width: 100%; */
+  width: 4.6rem;
+  height: 1.8rem;
+  padding: 0.2rem 0;
+  overflow: hidden;
+}
+
+.paihb_main_gfb_right p {
+  width: 100%;
+  overflow: hidden;
+  /*超出隐藏*/
+  text-overflow: ellipsis;
+  /*文本超出用省略号代替*/
+  white-space: nowrap;
+  /*强制不换行*/
+  font-size: 0.26rem;
+  color: #666;
+  line-height: 0.6rem;
+}
+
+/* 推荐榜 */

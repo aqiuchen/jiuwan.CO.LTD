@@ -1,0 +1,54 @@
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  margin:0;padding:0;
+}
+li{list-style:none}
+img{border:0;vertical-align:middle;}
+em{font-style: normal;}
+p{word-wrap:break-word}
+body{
+  overflow-x: hidden;
+  background-color: white;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none;
+  font-family: helvetica;
+  -webkit-backface-visibility: hidden;/* for 闪屏 */
+}
+/*去掉苹果手机按钮默认样式*/
+input[type="button"], input[type="submit"], input[type="reset"] {
+  -webkit-appearance: none;
+}
+input,button{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-appearance: none;
+  /*去掉默认点击边框*/
+  outline: none;
+}
+textarea {
+  -webkit-appearance: none;
+}
+/*a标签点击去掉背景色*/
+a{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+  text-decoration: none;
+}
+html{
+  /*background-color: #eff5f8;*/
+  -webkit-tap-highlight-color: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  appearance:none;
+}
+
+/*各页面公共样式*/
+.vueone_index, .vueone_news, .vueone_music, .vueone_video{
+  width: 92%;
+  padding: 1.5rem 4% 1.2rem;
+}

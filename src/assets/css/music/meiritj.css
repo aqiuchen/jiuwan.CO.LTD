@@ -1,0 +1,95 @@
+.meiritj{
+  padding-bottom: 1.2rem;
+}
+.meiritj_main {
+  overflow: hidden;
+  padding: 0.8rem 0 0 0;
+}
+
+.meiritj_main_top {
+  float: left;
+  width: 100%;
+}
+
+.meiritj_main_top img {
+  width: 100%;
+}
+
+.meiritj_main_content {
+  width: 92%;
+  padding: 0.2rem 4%;
+  background-color: white;
+  margin-top: -0.4rem;
+  float: left;
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 0 0 0.2rem #999999;
+}
+
+.meiritj_content_top {
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.meiritj_content_top img {
+  width: 0.5rem;
+  height: 0.5rem;
+  float: left;
+}
+
+.meiritj_content_top h5 {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  display: block;
+  margin-left: 0.8rem;
+  font-size: 0.32rem;
+}
+
+.meiritj_content_list {
+  overflow: hidden;
+  margin-top: 0.3rem;
+}
+
+.meiritj_content_list>img {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.1rem;
+  float: left;
+}
+
+.meiritj_list_main {
+  width: 3.8rem;
+  padding: 0.1rem 0;
+  float: left;
+  margin-left: 0.2rem;
+  line-height: 0.4rem;
+}
+
+.meiritj_list_main p {
+  width: 100%;
+  font-size: 0.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+
+.meiritj_list_main span {
+  width: 100%;
+  font-size: 0.24rem;
+  color: #999999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+
+.meiritj_list_right {
+  float: right;
+  margin-top: 0.25rem;
+}
+
+.meiritj_list_right img {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.2rem;
+}

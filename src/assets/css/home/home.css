@@ -1,0 +1,117 @@
+.vueone_home{
+	background-color: #f2f2f2;
+  padding: 0 0 1.2rem 0;
+}
+/*头像*/
+.home_isLogin{
+	width: 100%;
+	background-color: white;
+  color: black;
+}
+/*-登录*/
+.home_isLogin>img{
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	margin: 0.4rem;
+}
+.home_isLogin>b{
+	font-size: 0.4rem;
+
+	font-family: "微软雅黑";
+	font-weight: normal;
+}
+.home_isLogin>a{
+	display: block;
+	width: 0.4rem;
+	height: 0.4rem;
+	float: right;
+	background-image: url(../../../../static/images/home/home_right.png);
+	background-size: cover;
+	margin: 0.8rem 0.4rem;
+}
+/*未登录*/
+.home_noLogin{
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	padding: 0.4rem 0;
+}
+.home_noLogin>a{
+	display: block;
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 50%;
+	background-color: #17b3a3;
+	color: white;
+	text-align: center;
+	line-height: 1.8rem;
+	font-size: 0.4rem;
+	font-weight: bold;
+}
+/*头部*/
+.home_header{
+	width: 100%;
+	height: 1.2rem;
+	margin: 0.1rem 0;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+}
+.home_header a{
+	width: 1.6rem;
+	height: 1.2rem;
+	text-align: center;
+}
+.home_header img{
+	width: 0.5rem;
+	height: 0.5rem;
+	margin: 0.1rem 0 0 0;
+}
+.home_header p{
+	width: 100%;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	font-size: 0.3rem;
+	color: #393939;
+}
+/*内容部分*/
+.home_list{
+	width: 100%;
+	/* padding-bottom: 62px; */
+}
+/*公共部分*/
+.home_list a{
+	display: block;
+	width: 100%;
+	height: 1rem;
+	line-height: 1rem;
+	border-bottom: 0.02rem solid #e3e3e3;
+	background-color: white;
+}
+.home_list h5{
+	display: block;
+	float: left;
+	font-size: 0.3rem;
+	color: #393939;
+	margin: 0 0.3rem;
+	font-weight: normal;
+}
+.home_list img{
+	width: 0.4rem;
+	height: 0.4rem;
+	float: right;
+	margin: 0.3rem;
+}
+/*上部*/
+.list_top{
+
+}
+/*中部*/
+.list_main{
+	margin: 0.2rem 0;
+}
+/*下部*/
+.list_down{
+
+}

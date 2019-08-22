@@ -1,0 +1,153 @@
+.newsmain{
+  width: 94%;
+  padding: 1rem 3%;
+  position: relative;
+}
+/* 新闻标题 */
+.newsmain_title{
+}
+.newsmain_title h5{
+  font-size: 0.4rem;
+  text-align: justify;
+}
+.newsmain_title_xinxi{
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 0.26rem;
+  color: #999999;
+  margin: 0.3rem 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.newsmain_title_xinxi p{
+  margin: 0 0.2rem;
+}
+/* 新闻内容 */
+.newsmain_content{
+  /* border: 1px solid red; */
+}
+.newsmain_content img{
+  width: 100%;
+}
+.newsmain_content .newsmain_content_p{
+  text-align: justify;
+  font-size: 0.32rem;
+  margin: 0.4rem 0 0 0;
+  /* text-indent: 2em; */
+  line-height: 0.5rem;
+  color: #333333;
+}
+.newsmain_content_p p{
+  margin: 0.3rem 0 0 0;
+}
+.newsmain_content_p b{
+  display: block;
+  margin: 0.5rem 0 0 0;
+}
+/* 评论 */
+.newsmain_pinglun{
+  width: 100%;
+  margin: 0.5rem 0 0 0;
+}
+.newsmain_pinglun_list{
+  overflow: hidden;
+  margin: 0.3rem 0 0 0;
+}
+/* 评论顶部信息 */
+.pinglun_list_top{
+  overflow: hidden;
+}
+/* 评论用户头像和名字 */
+.pinglun_list_top>a{
+  display: block;
+  height: 0.6rem;
+  float: left;
+}
+.pinglun_list_top>a img{
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  float: left;
+}
+.pinglun_list_top>a p{
+  font-size: 0.3rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  margin: 0 0 0 0.2rem;
+  float: left;
+  color: #17b3a3;
+}
+/* 点赞 */
+.pinglun_list_dz{
+  float: right;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+.pinglun_list_dz>img{
+  width: 0.3rem;
+  height: 0.3rem;
+  margin: 0.15rem 0.05rem;
+}
+/* 用户评论 */
+.pinglun_list_main{
+  margin: 0.06rem 0;
+  padding: 0 0 0 0.8rem;
+  font-size: 0.28rem;
+  text-align: justify;
+}
+/* 评论用户底部信息 */
+.pinglun_list_down{
+  padding: 0 0 0 0.8rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  overflow: hidden;
+  font-size: 0.2rem;
+}
+.pinglun_list_down p{
+  float: left;
+}
+.pinglun_list_down span{
+  float: left;
+  margin: 0 0.2rem;
+}
+/* 底部评论输入框 */
+.newsmain_bottom{
+  width: 100%;
+  padding: 0.1rem 0%;
+  height: 0.6rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  border-top: 0.02rem solid #dddddf;
+  display: flex;
+  justify-content: space-around;
+}
+.newsmain_bottom input{
+  width: 2.8rem;
+  height: 0.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.24rem;
+  background-color: #ededed;
+  padding: 0 0.2rem;
+}
+.newsmain_bottom img{
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.05rem 0;
+}
+.newsmain_bottom_pl{
+  position: relative;
+}
+.newsmain_bottom_pl span{
+  position: absolute;
+  font-size: 0.12rem;
+  top: -0.02rem;
+  right: -0.16rem;
+  color: white;
+  background-color: red;
+  padding: 0.01rem 0.1rem;
+  border-radius: 0.2rem;
+}

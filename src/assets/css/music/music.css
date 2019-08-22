@@ -1,0 +1,146 @@
+.vueone_music{}
+/*上部列表导航*/
+.music_nav{
+	width: 100%;
+	height: 1.2rem;
+	padding: 0.2rem 0;
+	border-bottom: 0.01rem solid #e3e3e3;
+	display: flex;
+	justify-content: space-around;
+}
+.music_nav a{
+	width: 1.2rem;
+	height: 1.2rem;
+	text-align: center;
+}
+.music_nav img{
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+}
+.music_nav p{
+	width: 100%;
+	height: 0.2rem;
+	line-height: 0.2rem;
+	font-size: 0.28rem;
+	color: #393939;
+	margin: 0.16rem 0 0 0;
+}
+/*推荐歌单*/
+.music_recommend{
+	width: 100%;
+	padding: 0.24rem 0;
+}
+/*标题栏*/
+.music_recommend_top{
+	width: 100%;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	overflow: hidden;
+}
+.music_recommend_top h5{
+	display: block;
+	height: 0.6rem;
+	float: left;
+	font-size: 0.36rem;
+}
+.music_recommend_top a{
+	height: 0.4rem;
+	line-height: 0.4rem;
+	margin: 0.1rem 0;
+	float: right;
+	font-size: 0.24rem;
+	color: #666;
+	padding: 0 0.2rem;
+	border-radius: 0.4rem;
+	border: 0.02rem solid #e3e3e3;
+}
+/*歌单列表*/
+.music_recommend_main{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.music_recommend_list{
+	width: 2rem;
+	/*height: 150px;*/
+	margin: 0.2rem 0 0 0;
+}
+/*设置两端对齐*/
+/*.music_recommend_main{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.music_recommend_list{
+	width: 100px;
+	height: 150px;
+	flex: 0 0 20%;
+	margin: 0 6% 0 0;
+	box-sizing: border-box;
+}
+.music_recommend_list:nth-child(3n){
+	margin-right: 0;
+}
+ .music_recommend_list:nth-child(3n+1){
+	margin-right: 7%;
+} */
+
+/*封面*/
+.recommend_list_content{
+	position: relative;
+}
+.recommend_list_content>img{
+	width: 2rem;
+	height: 2rem;
+	border-radius: 0.1rem;
+}
+/*浮层*/
+.recommend_list_top{
+	width: 98%;
+	padding: 0 2% 0 0;
+	height: 0.4rem;
+	position: absolute;
+	font-size: 0.2rem;
+	color: white;
+	overflow: hidden;
+}
+.recommend_list_top .list_top_one{
+	width: 0.4rem;
+	height: 0.4rem;
+}
+.recommend_list_top .list_top_two{
+	width: 0.24rem;
+	height: 0.24rem;
+	float: right;
+	margin: 0.08rem 0;
+}
+.recommend_list_top span{
+	height: 0.4rem;
+	line-height: 0.4rem;
+	float: right;
+	margin: 0 0.02rem;
+	font-weight: bold;
+}
+.recommend_list_top i{
+	height: 0.4rem;
+	line-height: 0.4rem;
+	font-style: normal;
+	float: right;
+}
+/*标题*/
+.recommend_list_title{
+	width: 100%;
+	color: #333;
+	font-size: 0.28rem;
+	/*控制只显示2行，多的用省略号*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	margin: 0.1rem 0;
+	text-align: justify;
+}

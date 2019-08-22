@@ -1,0 +1,48 @@
+.vueone_nav{
+	width: 100%;
+	height: 1rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	/*使用flex布局后子元素float和clear将不起作用*/
+	display: flex;
+	justify-content: space-around;
+	border-top: 0.01rem solid #dddddf;
+	background-color: white;
+  z-index: 999;
+}
+.vueone_nav_list{
+	width: 1rem;
+	height: 1rem;
+	text-align: center;
+}
+.vueone_nav_list>div{
+	width: 100%;
+	height: 0.5rem;
+	text-align: center;
+	margin: 0.1rem 0 0.1rem 0;
+	/* border: 1px solid red; */
+}
+.vueone_nav_list img{
+	width: 0.5rem;
+	height: 0.5rem;
+}
+.vueone_nav_list h5{
+	display: block;
+	float: left;
+	width: 100%;
+	height: 0.2rem;
+	line-height: 0.2rem;
+	font-size: 0.24rem;
+	font-weight: normal;
+	/* border: 1px solid red; */
+}
+/*点击时字体颜色*/
+.dianji{
+	color: #17b3a3;
+	/*color: #FEAC3E;*/
+}
+/*未点击时字体颜色*/
+.nodianji{
+	color: #8a8a8a;
+}

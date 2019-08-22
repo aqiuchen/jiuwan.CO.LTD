@@ -1,0 +1,24 @@
+.pcIndex{
+  width: 80%;
+  padding: 10px 10%;
+}
+.pcIndex_head{
+  width: 100%;
+}
+.pcIndex_head img{
+  width: 100%;
+}
+.pcIndex_main{
+  margin: 20px 0;
+}
+.pcIndex_main p{
+  font-size: 20px;
+  line-height: 30px;
+}
+.pcIndex_bottom{
+  /* border: 1px solid red; */
+}
+.pcIndex_bottom p{
+  font-size: 14px;
+  margin-top: 10px;
+}

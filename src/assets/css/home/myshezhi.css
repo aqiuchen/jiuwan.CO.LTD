@@ -1,0 +1,81 @@
+.myshezhi{
+  width: 100%;
+  padding: 1rem 0  0.1rem 0;
+  background-color:  #f2f2f2;
+}
+.myshezhi_main{
+  overflow: hidden;
+}
+/* 公共部分 */
+.myshezhi_main_top, .myshezhi_main_content, .myshezhi_main_down{
+  width: 96%;
+  padding: 0 0 0 4%;
+  background-color: white;
+  overflow: hidden;
+}
+.myshezhi_main h5{
+  height: 0.8rem;
+  line-height: 0.8rem;
+  display: block;
+  font-size: 0.32rem;
+  float: left;
+  color: #333333;
+  font-weight: normal;
+}
+.myshezhi_main img{
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: 0.2rem 0;
+  float: right;
+}
+.myshezhi_content_list:last-child{
+  border-bottom: none;
+}
+/* 上部 */
+.myshezhi_main_top a{
+  width: 97%;
+  border-bottom: 0.02rem solid #e3e3e3;
+  float: left;
+  padding: 0.1rem 3% 0.1rem 0;
+}
+.myshezhi_main_top a:last-child, .myshezhi_main_down a:last-child{
+  border-bottom: none;
+}
+/* 中部 */
+.myshezhi_main_content{
+  margin: 0.2rem 0;
+}
+.myshezhi_content_list, .myshezhi_main_down>a{
+  width: 97%;
+  border-bottom: 0.02rem solid #e3e3e3;
+  float: left;
+  padding: 0.1rem 3% 0.1rem 0;
+}
+.myshezhi_content_radio{
+  float: right;
+  position: relative;
+}
+.myshezhi_content_radio input{
+  position: absolute;
+  width: 0.8rem;
+  height: 0.8rem;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+.myshezhi_content_radio img{
+  width: 0.8rem;
+  height: 0.8rem;
+  float: left;
+  margin: 0;
+}
+/* 退出登录 */
+.myshezhi_out{
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  background-color: white;
+  margin: 0.8rem 0;
+  font-size: 0.36rem;
+}

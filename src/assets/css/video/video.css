@@ -1,0 +1,95 @@
+.video_main{
+	margin: 0.4rem 0 0 0;
+}
+.video_list{
+	width: 100%;
+}
+/*视频+视频上方标题*/
+.video_list_show{
+	position: relative;
+}
+.video_list_show p{
+	width: 92%;
+	padding: 0.06rem 4%;
+	font-size: 0.3rem;
+	text-align: justify;
+	position: absolute;
+	color: white;
+	/*控制只显示2行，多的用省略号*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.video_list_show video{
+	width: 100%;
+	/* height: 4rem; */
+	background-color: black;
+}
+/*视频底部信息*/
+.video_list_bottom{
+	width: 100%;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	font-size: 0.3rem;
+	padding: 0.2rem 0;
+}
+/*底部左侧信息*/
+.video_list_name{
+	float: left;
+}
+.video_list_name a{
+	display: flex;
+	justify-content: flex-start;
+}
+.video_list_name img{
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 50%;
+}
+.video_list_name b{
+	color: black;
+	margin: 0 0.2rem;
+	/*作者名字只显示8位，超过则用省略号代替*/
+	overflow: hidden;	/*自动隐藏文字*/
+	text-overflow: ellipsis;	/*文字隐藏后添加省略号*/
+	white-space: nowrap;	/*强制不换行*/
+	max-width: 7em;	   /*超过多少字省略号且不允许出现半截字*/
+}
+.video_list_attention{
+	display: block;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	color: red;
+	float: left;
+}
+/*底部右侧信息*/
+.video_list_review{
+	display: flex;
+	justify-content: flex-start;
+	float: right;
+}
+.video_list_review a{
+	display: flex;
+	justify-content: flex-start;
+}
+.video_list_review img{
+	width: 0.4rem;
+	height: 0.4rem;
+	border-radius: 50%;
+	margin: 0.1rem 0;
+}
+.video_list_review p{
+	height: 0.6rem;
+	line-height: 0.6rem;
+	margin: 0 0.1rem;
+	color: black;
+}
+.video_list_review b{
+	display: block;
+	font-weight: bold;
+	height: 0.6rem;
+	line-height: 0.48rem;
+	margin: 0 0 0 0.2rem;
+}
