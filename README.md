@@ -1,4 +1,4 @@
-# vueone
+# vue
 
 > A Vue.js project
 
