@@ -13,8 +13,8 @@ module.exports = {
     proxyTable: {},
 
     // Various Dev Server settings
-    host: 'localhost',
-    // host: '172.20.10.3',
+    // host: 'localhost',
+    host: '192.168.1.5',
     // host: 'mi.dyfeiyu.com',
     port: 8081,
     autoOpenBrowser: false,

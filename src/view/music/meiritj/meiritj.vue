@@ -45,7 +45,8 @@
     mounted() {
       this.homeTitle = this.$route.query.title;
       this.axios({
-        url: 'http://localhost:8081/static/aq.json',
+        // url: 'http://localhost:8081/static/aq.json',
+        url: 'http://192.168.1.5:8081/static/aq.json',
         // url: 'https://mi.dyfeiyu.com/static/aq.json',
         method: 'GET'
       }).then(res => {

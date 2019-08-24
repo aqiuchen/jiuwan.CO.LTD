@@ -71,7 +71,8 @@
       //使用axios请求数据
       {
         const that = this;
-        that.axios.get('http://localhost:8081/static/aq.json')
+        // that.axios.get('http://localhost:8081/static/aq.json')
+        that.axios.get('http://192.168.1.5:8081/static/aq.json')
         // that.axios.get('https://mi.dyfeiyu.com/static/aq.json')
           .then(response => {
             that.videos = response.data.videos;
