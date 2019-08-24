@@ -833,58 +833,137 @@
   "tjgqs": [{
     "tjgqImg": "../../static/images/home/home_name.png",
     "tjgqTitle": "Maybe",
-    "tjgqName": "Janieck/Bunt - Maybe"
+    "tjgqName": "Janieck/Bunt - Maybe",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 1
   },{
     "tjgqImg": "../../static/images/home/home-logo.png",
     "tjgqTitle": "Link",
-    "tjgqName": "Jim Yosef - Link"
+    "tjgqName": "Jim Yosef - Link",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 2
   },{
     "tjgqImg": "../../static/images/home/home_name.png",
     "tjgqTitle": "Awesome",
-    "tjgqName": "阳山伟伟 - Awesome"
+    "tjgqName": "阳山伟伟 - Awesome",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 3
   },{
     "tjgqImg": "../../static/images/home/home-logo.png",
     "tjgqTitle": "Maybe",
-    "tjgqName": "Janieck/Bunt - Maybe"
+    "tjgqName": "Janieck/Bunt - Maybe",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 4
   },{
     "tjgqImg": "../../static/images/home/home_name.png",
     "tjgqTitle": "不变的音乐（原曲：Jealousy - French Kiss）",
-    "tjgqName": "王绎龙 - 康电情歌"
+    "tjgqName": "王绎龙 - 康电情歌",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 5
   },{
     "tjgqImg": "../../static/images/home/home-logo.png",
     "tjgqTitle": "The New Kings",
-    "tjgqName": "Vicetone/Popeska/Luciana"
+    "tjgqName": "Vicetone/Popeska/Luciana",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 6
   },{
     "tjgqImg": "../../static/images/home/home_name.png",
     "tjgqTitle": "AFE - ☺",
-    "tjgqName": "BaTe My3blka/YouTube Music Porter"
+    "tjgqName": "BaTe My3blka/YouTube Music Porter",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 7
   },{
     "tjgqImg": "../../static/images/home/home-logo.png",
     "tjgqTitle": "寻梦古镇",
-    "tjgqName": "羽翼深蓝Wings - 寻梦古镇"
+    "tjgqName": "羽翼深蓝Wings - 寻梦古镇",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 8
   },{
     "tjgqImg": "../../static/images/home/home_name.png",
     "tjgqTitle": "Fall With You（feat.Bigg）",
-    "tjgqName": "Janieck/Bunt - Maybe Maybe Maybe Maybe Maybe"
+    "tjgqName": "Janieck/Bunt - Maybe Maybe Maybe Maybe Maybe",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 9
   },{
     "tjgqImg": "../../static/images/home/home-logo.png",
     "tjgqTitle": "One Last Time",
-    "tjgqName": "Gromee/jesper jenset - One Last Time"
+    "tjgqName": "Gromee/jesper jenset - One Last Time",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 10
   },{
     "tjgqImg": "../../static/images/home/home_name.png",
     "tjgqTitle": "选择失忆",
-    "tjgqName": "李彦霖 - 选择失忆"
+    "tjgqName": "李彦霖 - 选择失忆",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 11
   },{
     "tjgqImg": "../../static/images/home/home-logo.png",
     "tjgqTitle": "Touch The Sky（ANR151）",
-    "tjgqName": "Cedirc Gervalis/Digital Farm An"
+    "tjgqName": "Cedirc Gervalis/Digital Farm An",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 12
   },{
     "tjgqImg": "../../static/images/home/home_name.png",
     "tjgqTitle": "飞云之下",
-    "tjgqName": "韩红/林俊杰 - 飞云之下"
+    "tjgqName": "韩红/林俊杰 - 飞云之下",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 13
   },{
     "tjgqImg": "../../static/images/home/home-logo.png",
     "tjgqTitle": "想懋",
-    "tjgqName": "KonC - 想懋"
+    "tjgqName": "KonC - 想懋",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 14
+  },{
+    "tjgqImg": "../../static/images/home/home_name.png",
+    "tjgqTitle": "成都",
+    "tjgqName": "赵雷 - 成都",
+    "tjgqStopimg": "../../static/images/music/music_stop.png",
+    "tjgqPlayimg": "../../static/images/music/music_play.png",
+    "isbtnStop": true,
+    "isbtnPlay": false,
+    "musicId": 15
   }]
 }

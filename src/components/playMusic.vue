@@ -18,8 +18,8 @@
         <!-- 按钮信息 -->
         <div class="playMusic_btn">
           <img src="../../static/images/music/pmBefore.png" alt="上一曲" @click="pmBefore">
-          <img src="../../static/images/music/pmStop.png" alt="暂停" @click="pmPlay" v-show="ispmStop">
-          <img src="../../static/images/music/pmPlay.png" alt="播放" @click="pmPlay" v-show="ispmPlay">
+          <img src="../../static/images/music/pmStop.png" alt="暂停" @click="pmPlay" v-show="musicStop">
+          <img src="../../static/images/music/pmPlay.png" alt="播放" @click="pmPlay" v-show="musicPlay">
           <img src="../../static/images/music/pmAfter.png" alt="下一曲" @click="pmAfter">
           <img src="../../static/images/music/pmMore.png" alt="更多" @click="pmMore">
         </div>
@@ -33,8 +33,7 @@
   export default{
     data(){
       return{
-        ispmStop: false,
-        ispmPlay: true,
+
       }
     },
     mounted() {
@@ -44,33 +43,33 @@
       ...mapState({
         musicImg:state => state.musicImg,
         musicTitle:state => state.musicTitle,
+        musicStop:state => state.musicStop,
+        musicPlay:state => state.musicPlay,
       })
     },
     methods:{
       // 上一曲
       pmBefore(){
-        console.log("上一曲");
+        // 调用store中的方法
+        this.$store.commit('beforeMusic');
       },
       // 播放/暂停
       pmPlay(){
-        if(this.ispmStop){
-          this.ispmStop = false;
-          this.ispmPlay = true;
-          console.log("播放");
-        }else{
-          this.ispmStop = true;
-          this.ispmPlay = false;
-          console.log("暂停");
-        }
+        // 调用store中的方法
+        this.$store.commit('btnMusic');
       },
       // 下一曲
       pmAfter(){
-        console.log("下一曲");
+        // 调用store中的方法
+        this.$store.commit('afterMusic');
       },
       // 更多
       pmMore(){
         console.log("更多");
       }
+    },
+    watch:{
+
     }
   }
 </script>
