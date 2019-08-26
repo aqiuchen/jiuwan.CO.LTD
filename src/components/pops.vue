@@ -64,27 +64,27 @@
 
   /* 提示框 */
   .pops_main {
-    width: 4rem;
-    height: 2rem;
+    width: 4.2rem;
+    height: 2.6rem;
     background-color: white;
     position: absolute;
     z-index: 20;
-    /* box-shadow: 0 1 #999999; */
-    padding: 0.2rem;
     border-radius: 0.05rem;
   }
 
   .pops_ts {
-    text-align: center;
+    height: 1.4rem;
     font-size: 0.3rem;
     line-height: 0.4rem;
     padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .pops_btn {
     width: 90%;
-    height: 0.5rem;
-    padding: 0.15rem 5%;
+    padding: 0.2rem 5%;
     border-top: 0.02rem solid #dddddf;
     position: absolute;
     bottom: 0;
@@ -95,8 +95,9 @@
 
   .pops_btn span {
     width: 1.2rem;
-    height: 0.5rem;
-    line-height: 0.5rem;
+    height: 0.6rem;
+    line-height: 0.65rem;
+    border: none;
     text-align: center;
     font-size: 0.28rem;
     border-radius: 0.1rem;

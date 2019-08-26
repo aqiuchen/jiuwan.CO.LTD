@@ -7,7 +7,7 @@
 	/*使用flex布局后子元素float和clear将不起作用*/
 	display: flex;
 	justify-content: space-around;
-	border-top: 0.01rem solid #dddddf;
+	border-top: 0.02rem solid #dddddf;
 	background-color: white;
   z-index: 999;
 }

@@ -59,181 +59,216 @@ export default new Router({
   }, {
     path: '/index',
     name: '首页',
-    component: index
+    // component: index,
+    component: resolve => require(['../view/index/index.vue'],resolve)  //懒加载
   }, {
     path: '/pcIndex',
     name: 'PC端首页',
-    component: pcIndex
+    // component: pcIndex,
+    component: resolve => require(['../view/index/pcIndex.vue'],resolve)
   }, {
     path: '/index/qiandao',
     name: '签到',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: qiandao
+    // component: qiandao,
+    component: resolve => require(['../view/index/qiandao/qiandao.vue'],resolve)
   }, {
     path: '/index/yundong',
     name: '运动',
-    component: yundong
+    // component: yundong,
+    component: resolve => require(['../view/index/yundong/yundong.vue'],resolve)
   }, , {
     path: '/index/bianqian',
     name: '便签',
-    component: bianqian
+    // component: bianqian,
+    component: resolve => require(['../view/index/bianqian/bianqian.vue'],resolve)
   }, {
     path: '/index/dushu',
     name: '读书',
-    component: dushu
+    // component: dushu,
+    component: resolve => require(['../view/index/dushu/dushu.vue'],resolve)
   }, {
     path: '/index/changge',
     name: '唱歌',
-    component: changge
+    // component: changge,
+    component: resolve => require(['../view/index/changge/changge.vue'],resolve)
   }, {
     path: '/index/xuexi',
     name: '学习',
-    component: xuexi
+    // component: xuexi,
+    component: resolve => require(['../view/index/xuexi/xuexi.vue'],resolve)
   }, {
     path: '/news',
     name: '新闻',
-    component: news
+    // component: news,
+    component: resolve => require(['../view/news/news.vue'],resolve)
   }, {
     path: '/news/newsmain',
     name: '新闻内容页',
-    component: newsmain
+    // component: newsmain,
+    component: resolve => require(['../view/news/newsmain/newsmain.vue'],resolve)
   }, {
     path: '/music',
     name: '音乐',
-    component: music
+    // component: music,
+    component: resolve => require(['../view/music/music.vue'],resolve)
   }, {
     path: '/music/meiritj',
     name: '每日推荐',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: meiritj
+    // component: meiritj,
+    component: resolve => require(['../view/music/meiritj/meiritj.vue'],resolve)
   }, {
     path: '/music/gedan',
     name: '歌单',
-    component: gedan
+    // component: gedan,
+    component: resolve => require(['../view/music/gedan/gedan.vue'],resolve)
   }, {
     path: '/music/paihb',
     name: '排行榜',
-    component: paihb
+    // component: paihb,
+    component: resolve => require(['../view/music/paihb/paihb.vue'],resolve)
   }, {
     path: '/music/diantai',
     name: '电台',
-    component: diantai
+    // component: diantai,
+    component: resolve => require(['../view/music/diantai/diantai.vue'],resolve)
   }, {
     path: '/music/paobu',
     name: '跑步',
-    component: paobu
+    // component: paobu,
+    component: resolve => require(['../view/music/paobu/paobu.vue'],resolve)
   }, {
     path: '/video',
     name: '视频',
-    component: video
+    // component: video,
+    component: resolve => require(['../view/video/video.vue'],resolve)
   }, {
     path: '/video/videomain',
     name: '视频内容页',
-    component: videomain
+    // component: videomain,
+    component: resolve => require(['../view/video/videomain/videomain.vue'],resolve)
   }, {
     path: '/home',
     name: '我的',
-    component: home
+    // component: home,
+    component: resolve => require(['../view/home/home.vue'],resolve)
   }, {
     path: '/home/myshoucang',
     name: '我的收藏',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: myshoucang
+    // component: myshoucang,
+    component: resolve => require(['../view/home/myshoucang/myshoucang.vue'],resolve)
   }, {
     path: '/home/mypinglun',
     name: '我的评论',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: mypinglun
+    // component: mypinglun,
+    component: resolve => require(['../view/home/mypinglun/mypinglun.vue'],resolve)
   }, {
     path: '/home/mydianzan',
     name: '我的点赞',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: mydianzan
+    // component: mydianzan,
+    component: resolve => require(['../view/home/mydianzan/mydianzan.vue'],resolve)
   }, {
     path: '/home/mylishi',
     name: '浏览历史',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: mylishi
+    // component: mylishi,
+    component: resolve => require(['../view/home/mylishi/mylishi.vue'],resolve)
   }, {
     path: '/home/myqianbao',
     name: '我的钱包',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: myqianbao
+    // component: myqianbao,
+    component: resolve => require(['../view/home/myqianbao/myqianbao.vue'],resolve)
   }, {
     path: '/home/myxiaoxi',
     name: '消息通知',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: myxiaoxi
+    // component: myxiaoxi,
+    component: resolve => require(['../view/home/myxiaoxi/myxiaoxi.vue'],resolve)
   }, {
     path: '/home/mysixin',
     name: '我的私信',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: mysixin
+    // component: mysixin,
+    component: resolve => require(['../view/home/mysixin/mysixin.vue'],resolve)
   }, {
     path: '/home/myzuopin',
     name: '作品管理',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: myzuopin
+    // component: myzuopin,
+    component: resolve => require(['../view/home/myzuopin/myzuopin.vue'],resolve)
   }, {
     path: '/home/myshujia',
     name: '我的书架',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: myshujia
+    // component: myshujia,
+    component: resolve => require(['../view/home/myshujia/myshujia.vue'],resolve)
   }, {
     path: '/home/mydingdan',
     name: '我的订单',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: mydingdan
+    // component: mydingdan,
+    component: resolve => require(['../view/home/mydingdan/mydingdan.vue'],resolve)
   }, {
     path: '/home/mysaoma',
     name: '扫一扫',
-    component: mysaoma
+    // component: mysaoma,
+    component: resolve => require(['../view/home/mysaoma/mysaoma.vue'],resolve)
   }, {
     path: '/home/myfankui',
     name: '用户反馈',
     meta: {
       requireAuth: true,  //添加该字段，表示进入这个路由需要登录
     },
-    component: myfankui
+    // component: myfankui,
+    component: resolve => require(['../view/home/myfankui/myfankui.vue'],resolve)
   }, {
     path: '/home/myshezhi',
     name: '系统设置',
-    component: myshezhi
+    // component: myshezhi,
+    component: resolve => require(['../view/home/myshezhi/myshezhi.vue'],resolve)
   }, {
     path: '/home/myshezhi/about',
     name: '关于我们',
-    component: about
+    // component: about,
+    component: resolve => require(['../view/home/myshezhi/about.vue'],resolve)
   },{
     path: '/login',
     name: '登录',
-    component: login
+    // component: login,
+    component: resolve => require(['../view/login/login.vue'],resolve)
   }, {
     path: '/sign',
     name: '注册',
-    component: sign
+    // component: sign,
+    component: resolve => require(['../view/login/sign.vue'],resolve)
   }]
 })

@@ -94,7 +94,7 @@ export default{
     justify-content: space-between;
     background-color: white;
     z-index: 999;
-    border-bottom: 0.01rem solid #dddddf;
+    border-bottom: 0.02rem solid #dddddf;
 }
 .search_img img{
     width: 0.6rem;

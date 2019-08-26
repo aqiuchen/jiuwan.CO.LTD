@@ -13,6 +13,8 @@ export default new Vuex.Store({
     musicPlay: false, //开始播放按钮显示隐藏
     musicThis: [],  //播放当前歌曲信息
     musicList: [], //所有歌曲信息
+    istransformMusic: false,  //底部歌曲封面是否加载动画
+    isanimationMusic: false,  //滚动歌曲是否加载动画
   },
   getters: {
 
@@ -120,7 +122,18 @@ export default new Vuex.Store({
           }
         }
       }
-    }
+    },
+    // 歌曲名字滚动
+    musicTitle(state){
+      if(state.musicPlay){
+        // 添加css动画
+        state.isanimationMusic = true;
+        state.istransformMusic = true;
+      }else{
+        state.isanimationMusic = false;
+        state.istransformMusic = false;
+      }
+    },
   },
   actions: {
 

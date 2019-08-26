@@ -143,11 +143,11 @@
 }
 .newsmain_bottom_pl span{
   position: absolute;
-  font-size: 0.12rem;
+  font-size: 0.16rem;
   top: -0.02rem;
   right: -0.16rem;
   color: white;
   background-color: red;
-  padding: 0.01rem 0.1rem;
+  padding: 0.02rem 0.1rem;
   border-radius: 0.2rem;
 }

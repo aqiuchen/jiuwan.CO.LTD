@@ -68,8 +68,8 @@
 
 <style>
   .myfankui {
-    width: 94%;
-    padding: 1.2rem 3% 0.2rem;
+    width: 92%;
+    padding: 1.2rem 4% 0.2rem;
   }
   .myfankui_main{
     text-align: center;
@@ -112,11 +112,12 @@
   }
   .myfankui_main button{
     width: 80%;
-    height: 0.8rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
     background-color: #42B983;
     color: white;
     border: none;
     border-radius: 0.1rem;
-    font-size: 0.36rem;
+    font-size: 0.4rem;
   }
 </style>

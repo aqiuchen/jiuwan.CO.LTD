@@ -26,6 +26,7 @@
         </div>
       </div>
     </div>
+    <!-- <audio src="../../../../static/audio/aq.mp3" controls="controls">您的浏览器不支持 audio 标签。</audio> -->
     <play-music v-if="isplayMusic"></play-music>
   </div>
 </template>
@@ -46,8 +47,8 @@
       this.homeTitle = this.$route.query.title;
       this.axios({
         // url: 'http://localhost:8081/static/aq.json',
-        url: 'http://192.168.1.5:8081/static/aq.json',
-        // url: 'https://mi.dyfeiyu.com/static/aq.json',
+        // url: 'http://172.20.10.3:8081/static/aq.json',
+        url: 'https://mi.dyfeiyu.com/static/aq.json',
         method: 'GET'
       }).then(res => {
         this.tjgqs = res.data.tjgqs;
@@ -70,6 +71,8 @@
         this.$store.commit('playMusic', this.tjgqs[index]);
         // 调用播放歌曲时的方法
         this.$store.commit('bfMusic',index);
+        // 调用css动画
+        this.$store.commit('musicTitle');
       },
       // 当前歌曲更多操作
       bfMore(index) {
