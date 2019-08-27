@@ -18,6 +18,7 @@
         <!-- 音频/音频格式 -->
         <!-- 按钮信息 -->
         <div class="playMusic_btn">
+          <audio :src="musicFrom" id="audio" autoplay controls v-show="isAudio"></audio>
           <img src="../../static/images/music/pmBefore.png" alt="上一曲" @click="pmBefore">
           <img src="../../static/images/music/pmStop.png" alt="暂停" @click="pmPlay" v-show="musicStop">
           <img src="../../static/images/music/pmPlay.png" alt="播放" @click="pmPlay" v-show="musicPlay">
@@ -38,7 +39,7 @@
   export default {
     data() {
       return {
-
+        isAudio: false,
       }
     },
     mounted() {
@@ -49,10 +50,12 @@
         musicList: state => state.musicList,
         musicImg: state => state.musicImg,
         musicTitle: state => state.musicTitle,
+        musicFrom: state => state.musicFrom,
         musicStop: state => state.musicStop,
         musicPlay: state => state.musicPlay,
         isanimationMusic: state => state.isanimationMusic,
         istransformMusic: state => state.istransformMusic,
+
       })
     },
     methods: {
@@ -69,6 +72,12 @@
         this.$store.commit('btnMusic');
         // 调用css动画
         this.$store.commit('musicTitle');
+        let audio = document.querySelector('#audio');
+        if(this.$store.state.musicPlay){
+          audio.play();
+        }else{
+          audio.pause();
+        }
       },
       // 下一曲
       pmAfter() {
@@ -76,6 +85,8 @@
         this.$store.commit('afterMusic');
         // 调用css动画
         this.$store.commit('musicTitle');
+        let audio = document.querySelector('#audio');
+        console.log(this.musicFrom)
       },
       // 更多
       pmMore() {
@@ -191,7 +202,9 @@
     justify-content: space-between;
     margin-left: 0.2rem;
   }
+  .playMusic_btn audio{
 
+  }
   .playMusic_btn img {
     width: 0.6rem;
     height: 0.6rem;

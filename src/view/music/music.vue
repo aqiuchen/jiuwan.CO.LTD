@@ -121,8 +121,8 @@ music.vue<template>
       {
         const that = this;
         // that.axios.get('http://localhost:8081/static/aq.json')
-        // that.axios.get('http://172.20.10.3:8081/static/aq.json')
-        that.axios.get('https://mi.dyfeiyu.com/static/aq.json')
+        that.axios.get('http://192.168.1.4:8081/static/aq.json')
+        // that.axios.get('https://mi.dyfeiyu.com/static/aq.json')
           .then(response => {
             that.reMusics = response.data.reMusics;
             that.rsMusics = response.data.rsMusics;

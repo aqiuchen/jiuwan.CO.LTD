@@ -26,7 +26,6 @@
         </div>
       </div>
     </div>
-    <!-- <audio src="../../../../static/audio/aq.mp3" controls="controls">您的浏览器不支持 audio 标签。</audio> -->
     <play-music v-if="isplayMusic"></play-music>
   </div>
 </template>
@@ -41,17 +40,38 @@
         tjgqError: '',
         tjgqs: [],
         isplayMusic: false,
+        musicSrc: '../../../../static/music/Ersen0306%20-%20攀登%20(抖音版).mp3'
       }
     },
     mounted() {
       this.homeTitle = this.$route.query.title;
       this.axios({
         // url: 'http://localhost:8081/static/aq.json',
-        // url: 'http://172.20.10.3:8081/static/aq.json',
-        url: 'https://mi.dyfeiyu.com/static/aq.json',
+        url: 'http://192.168.1.4:8081/static/aq.json',
+        // url: 'https://mi.dyfeiyu.com/static/aq.json',
         method: 'GET'
       }).then(res => {
-        this.tjgqs = res.data.tjgqs;
+        let datas = res.data.musicList;
+        this.tjgqs = [];
+        datas.map((item,key,index) => {
+          let obj = {
+            tjgqImg: require('../../../../static/images/home/home_name.png'),
+            tjgqTitle: '歌曲名',
+            tjgqName: '演唱者',
+            tjgqId: 0,
+            tjgqFrom: '',
+            tjgqStopimg: require('../../../../static/images/music/music_stop.png'),
+            tjgqPlayimg: require('../../../../static/images/music/music_play.png'),
+            isbtnStop: true,
+            isbtnPlay: false
+          };
+          obj.tjgqImg = item.musicImg;
+          obj.tjgqTitle = item.musicTitle;
+          obj.tjgqName = item.musicName;
+          obj.tjgqId = item.musicId;
+          obj.tjgqFrom = item.musicFrom;
+          this.tjgqs.push(obj);
+        })
       }).catch(error => {
         this.tjgqError = '请求数据失败！';
       });
@@ -70,14 +90,23 @@
         // 将当前点击歌曲信息传递到store
         this.$store.commit('playMusic', this.tjgqs[index]);
         // 调用播放歌曲时的方法
-        this.$store.commit('bfMusic',index);
+        this.$store.commit('bfMusic', index);
         // 调用css动画
         this.$store.commit('musicTitle');
       },
       // 当前歌曲更多操作
       bfMore(index) {
         console.log("当前歌曲更多操作：" + this.tjgqs[index].tjgqTitle);
+      },
+      // 上一首
+      lastMusic() {
+        console.log("上一首");
+      },
+      // 下一首
+      nextMusic() {
+        console.log("下一首");
       }
+
     },
     computed: {
 
