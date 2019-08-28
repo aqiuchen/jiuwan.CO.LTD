@@ -40,15 +40,15 @@
         tjgqError: '',
         tjgqs: [],
         isplayMusic: false,
-        musicSrc: '../../../../static/music/Ersen0306%20-%20攀登%20(抖音版).mp3'
+        musicSrc: '../../../../static/music/Ersen0306%20-%20攀登%20(抖音版).mp3',
       }
     },
     mounted() {
       this.homeTitle = this.$route.query.title;
       this.axios({
         // url: 'http://localhost:8081/static/aq.json',
-        url: 'http://192.168.1.4:8081/static/aq.json',
-        // url: 'https://mi.dyfeiyu.com/static/aq.json',
+        // url: 'http://192.168.1.4:8081/static/aq.json',
+        url: 'https://mi.dyfeiyu.com/static/aq.json',
         method: 'GET'
       }).then(res => {
         let datas = res.data.musicList;
@@ -105,8 +105,7 @@
       // 下一首
       nextMusic() {
         console.log("下一首");
-      }
-
+      },
     },
     computed: {
 

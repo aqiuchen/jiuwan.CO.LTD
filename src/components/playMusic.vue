@@ -18,7 +18,6 @@
         <!-- 音频/音频格式 -->
         <!-- 按钮信息 -->
         <div class="playMusic_btn">
-          <audio :src="musicFrom" id="audio" autoplay controls v-show="isAudio"></audio>
           <img src="../../static/images/music/pmBefore.png" alt="上一曲" @click="pmBefore">
           <img src="../../static/images/music/pmStop.png" alt="暂停" @click="pmPlay" v-show="musicStop">
           <img src="../../static/images/music/pmPlay.png" alt="播放" @click="pmPlay" v-show="musicPlay">
@@ -26,6 +25,7 @@
           <img src="../../static/images/music/pmMore.png" alt="更多" @click="pmMore">
         </div>
       </div>
+      <audio :src="musicFrom" id="audio" autoplay controls v-show="isAudio" loop></audio>
     </div>
   </div>
 </template>
@@ -56,7 +56,12 @@
         isanimationMusic: state => state.isanimationMusic,
         istransformMusic: state => state.istransformMusic,
 
-      })
+      }),
+      // 获取底部播放暂停按钮的状态，用于监听判断
+      audioPlays() {
+        let musicPlay = this.$store.state.musicPlay;
+        return musicPlay;
+      }
     },
     methods: {
       // 上一曲
@@ -72,12 +77,7 @@
         this.$store.commit('btnMusic');
         // 调用css动画
         this.$store.commit('musicTitle');
-        let audio = document.querySelector('#audio');
-        if(this.$store.state.musicPlay){
-          audio.play();
-        }else{
-          audio.pause();
-        }
+
       },
       // 下一曲
       pmAfter() {
@@ -85,8 +85,6 @@
         this.$store.commit('afterMusic');
         // 调用css动画
         this.$store.commit('musicTitle');
-        let audio = document.querySelector('#audio');
-        console.log(this.musicFrom)
       },
       // 更多
       pmMore() {
@@ -94,7 +92,23 @@
       }
     },
     watch: {
-
+      // 监听播放暂停按钮状态，根据状态调用播放暂停事件
+      audioPlays: {
+        handler(audioPlays){
+          let audio = document.querySelector('#audio');
+          console.log(audioPlays);
+          if (audioPlays) {
+            audio.play();
+            console.log("开始播放");
+          } else {
+            audio.pause();
+            console.log("暂停播放");
+          }
+          // this.musicEnded();
+        },
+        // immediate: true,
+        // deep: true
+      }
     }
   }
 </script>
@@ -113,7 +127,12 @@
     justify-content: space-between;
   }
 
-  .playMusic_left {}
+  .playMusic audio {
+    width: 6rem;
+    /* position: absolute; */
+    top: 0;
+    opacity: 0.1;
+  }
 
   .playMusic_left img {
     width: 1rem;
@@ -161,36 +180,61 @@
     left: 0;
     top: 0;
   }
-  .animationMusic{
+
+  .animationMusic {
     animation: musicPlay 15s linear infinite alternate;
   }
 
   /* 封面旋转 */
-  .transformMusic{
+  .transformMusic {
     animation: imgPlay 10s linear infinite;
   }
+
   /* 动画 */
-  @keyframes imgPlay{
-    0% {transform: rotate(0deg);}
-    25% {transform: rotate(90deg);}
-    50% {transform: rotate(180deg);}
-    75% {transform: rotate(270deg);}
-    100% {transform: rotate(360deg);}
+  @keyframes imgPlay {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(90deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    75% {
+      transform: rotate(270deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
+
   @keyframes musicPlay {
     0% {
       left: -1rem;
       top: 0;
-    }25% {
+    }
+
+    25% {
       left: 1.4rem;
       top: 0;
-    }50% {
+    }
+
+    50% {
       left: 2.8rem;
       top: 0;
-    }75% {
+    }
+
+    75% {
       left: 1.4rem;
       top: 0;
-    }100% {
+    }
+
+    100% {
       left: -1rem;
       top: 0;
     }
@@ -202,9 +246,7 @@
     justify-content: space-between;
     margin-left: 0.2rem;
   }
-  .playMusic_btn audio{
 
-  }
   .playMusic_btn img {
     width: 0.6rem;
     height: 0.6rem;

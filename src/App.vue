@@ -6,7 +6,7 @@
     </div>
 
     <!-- APP默认渲染视图 -->
-    <router-view/>
+    <router-view />
 
     <!-- 底部导航 -->
     <div class="app_nav" v-show="isNav">
@@ -27,6 +27,7 @@
         isNav: true,
         clientHeight: '', //原始屏幕高度
         watchHeight: '', //实时屏幕高度
+        clientWidth: '', //原始屏幕宽度
         watchWidth: '', //实时屏幕宽度
       }
     },
@@ -49,8 +50,10 @@
       this.clientHeight = document.documentElement.clientHeight;
       // 加载页面时获取屏幕原始宽度-如果超过768跳转PC页面
       this.clientWidth = document.documentElement.clientWidth;
-      if(this.clientWidth > 768){
+      if (this.clientWidth > 768) {
         this.$router.replace('/pcIndex');
+      }else{
+        this.$router.replace('/index');
       }
     },
     // 生命周期钩子函数 （更新前）
@@ -118,18 +121,21 @@
       watchHeight() {
         const that = this;
         // 如果实时屏幕高度小于原始屏幕高度，表示键盘弹出，此时隐藏底部导航
-        if(that.watchHeight < that.clientHeight){
-          that.$store.commit('btnShows',false);
-        }else{
-          that.$store.commit('btnShows',true);
+        if (that.watchHeight < that.clientHeight && that.watchHeight > that.clientHeight / 4) {
+          that.$store.commit('btnShows', false);
+        } else {
+          that.$store.commit('btnShows', true);
         }
       },
       // 监听实时屏幕宽度变化-如果超过768跳转PC页面
-      watchWidth(){
-        if(this.watchWidth > 768){
-          this.$router.replace('/pcIndex');
-        }else{
-          this.$router.replace('/index');
+      watchWidth() {
+        const that = this;
+        if (that.watchWidth > 768) {
+          that.$router.replace('/pcIndex');
+        } else if (that.watchWidth == that.clientWidth) {
+
+        } else {
+          that.$router.replace('/index');
         }
       }
     }

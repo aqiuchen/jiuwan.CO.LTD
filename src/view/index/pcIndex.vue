@@ -14,7 +14,7 @@
     </div>
     <div class="pcIndex_right">
       <img src="../../../static/images/home/ewm.png" alt="二维码">
-      <p>推荐使用支付宝扫码访问体验最佳</p>
+      <p>可通过微信、QQ、支付宝扫码体验</p>
     </div>
   </div>
 </template>
