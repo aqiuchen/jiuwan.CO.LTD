@@ -2,7 +2,6 @@
   <div class="vueone_nav" v-show="btnShow">
     <!-- 绑定计算属性aq,为了控制导航点击对应页面显示对应的颜色和图片 -->
     {{aq}}
-
     <router-link v-for="(nav,index) in navs" :to="nav.path" @click.native="clicknav(index)" class="vueone_nav_list"
       :key="index">
       <div>

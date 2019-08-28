@@ -14,7 +14,7 @@ module.exports = {
 
     // Various Dev Server settings
     // host: 'localhost',
-    // host: '192.168.1.4',
+    // host: '192.168.0.100',
     host: 'mi.dyfeiyu.com',
     port: 8081,
     autoOpenBrowser: false,

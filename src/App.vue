@@ -121,9 +121,13 @@
       watchHeight() {
         const that = this;
         // 如果实时屏幕高度小于原始屏幕高度，表示键盘弹出，此时隐藏底部导航
-        if (that.watchHeight < that.clientHeight && that.watchHeight > that.clientHeight / 4) {
-          that.$store.commit('btnShows', false);
-        } else {
+        if (that.watchHeight < that.clientHeight) {
+          if((that.clientHeight - that.watchHeight) < 100){
+            that.$store.commit('btnShows', true);
+          }else{
+            that.$store.commit('btnShows', false);
+          }
+        } else{
           that.$store.commit('btnShows', true);
         }
       },
