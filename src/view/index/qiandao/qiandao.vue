@@ -5,7 +5,7 @@
       <!-- 时间位置信息 -->
       <div class="qiandao_top">
         <span>当前位置: {{qiandaoDz}}</span>
-        <span>当前时间: {{qiandaoDate}}</span>
+        <span>当前时间: {{longTime}}</span>
       </div>
       <!-- 地图 -->
       <div class="qiandao_map">
@@ -18,7 +18,7 @@
       <!-- 签到显示 -->
       <div class="qiandao_ts">
         <div>
-          <p>签到时间：</p><span>{{qiandaoTs}}</span>
+          <p>签到时间：</p><span>{{qiandaoDate}}</span>
         </div>
         <div>
           <p>签到地点：</p><span>{{qiandaoDzs}}</span>
@@ -34,18 +34,16 @@
 
 <script>
   import goBack from '../../../components/goBack.vue';
+  import {mapState, mapActions, mapGetters} from 'vuex';
   export default {
     data() {
       return {
         homeTitle: '',
         qiandaoDz: '航天科技大厦',
-        qiandaoDate: '', //当前时间
         qiandaoBtn: '签到',
         isDisabled: false, //是否禁用按钮
-        qiandaoTs: '未签到', //签到时间
+        qiandaoDate: '未签到', //签到时间
         qiandaoDzs: '未签到', //用于存放签到地点
-        qiandaoDates: '', //用于存放获取的长时间
-        qiandaoTss: '', //用于存放获取的短时间
       }
     },
     mounted() {
@@ -53,42 +51,26 @@
 
       // 调用时间函数
       setInterval(() => {
-        this.dates();
-        this.qiandaoDate = this.qiandaoDates;
+        this.$store.commit('dates');
       }, 1000)
     },
     computed: {
-
+      ...mapState({
+        shortTime:state => state.date.shortTime,
+        longTime:state => state.date.longTime,
+      }),
     },
     components: {
       goBack
     },
     methods: {
-      // 封装时间
-      dates() {
-        let date = new Date();
-        const year = date.getFullYear(); //年
-        const month = date.getMonth() + 1; //月
-        const data = date.getDate(); //日
-        const hours = date.getHours(); //时
-        const minutes = date.getMinutes(); //分
-        const seconds = date.getSeconds(); //秒
-
-        let nowTs = hours + ':' + minutes + ':' + seconds;
-        let nowDate = year + '/' + month + '/' + data + ' ' + hours + ':' + minutes + ':' + seconds;
-
-        // 将上面转化的时间格式存放到data数据中
-        this.qiandaoTss = nowTs;
-        this.qiandaoDates = nowDate;
-      },
       // 点击签到
       qiandaoClick() {
         this.isDisabled = true;
         this.qiandaoBtn = '已签到';
         this.qiandaoDzs = this.qiandaoDz;
-        // 调用时间函数
-        this.dates();
-        this.qiandaoTs = this.qiandaoTss;
+        this.qiandaoDate = this.$store.state.date.shortTime;
+        this.$store.commit('dates');
       }
     }
   }

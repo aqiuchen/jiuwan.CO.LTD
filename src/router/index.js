@@ -2,14 +2,20 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // 首页
-import pcIndex from '@/view//index/pcIndex'//PC端首页
-import index from '@/view//index/index'//移动端首页
-import qiandao from '@/view//index/qiandao/qiandao' //签到
-import yundong from '@/view//index/yundong/yundong' //运动
-import bianqian from '@/view//index/bianqian/bianqian' //便签
-import dushu from '@/view//index/dushu/dushu' //读书
-import changge from '@/view//index/changge/changge' //唱歌
-import xuexi from '@/view//index/xuexi/xuexi' //学习
+import pcIndex from '@/view/index/pcIndex'//PC端首页
+import index from '@/view/index/index'//移动端首页
+import qiandao from '@/view/index/qiandao/qiandao' //签到
+import yundong from '@/view/index/yundong/yundong' //运动
+import bianqian from '@/view/index/bianqian/bianqian' //便签
+import dushu from '@/view/index/dushu/dushu' //读书
+import changge from '@/view/index/changge/changge' //唱歌
+import xuexi from '@/view/index/xuexi/xuexi' //学习
+import zhishi from '@/view/index/xuexi/zhishi' //知识累计
+import zsTest from '@/view/index/xuexi/zsTest' //知识累计子页面
+import dati from '@/view/index/xuexi/dati' //答题
+import dtTest from '@/view/index/xuexi/dtTest' //答题子页面
+import kaoshi from '@/view/index/xuexi/kaoshi' //考试
+import ksTest from '@/view/index/xuexi/ksTest' //考试子页面
 
 // 新闻
 import news from '@/view/news/news'
@@ -99,6 +105,39 @@ export default new Router({
     name: '学习',
     // component: xuexi,
     component: resolve => require(['../view/index/xuexi/xuexi.vue'],resolve)
+  }, {
+    path: '/index/xuexi/zhishi',
+    name: '知识累计',
+    meta: {
+      requireAuth: true,  //添加该字段，表示进入这个路由需要登录
+    },
+    // 懒加载
+    component: resolve => require(['../view/index/xuexi/zhishi.vue'],resolve),
+    children: [ //子路由
+        { path:'/index/xuexi/zhishi/zsTest', component:zsTest, name:'知识累计子页面' },
+      ]
+  },{
+    path: '/index/xuexi/dati',
+    name: '答题比赛',
+    meta: {
+      requireAuth: true,  //添加该字段，表示进入这个路由需要登录
+    },
+    // component: xuexi,
+    component: resolve => require(['../view/index/xuexi/dati.vue'],resolve),
+    children: [ //子路由
+        { path:'/index/xuexi/dati/dtTest', component:dtTest, name:'答题试题' },
+      ]
+  },{
+    path: '/index/xuexi/kaoshi',
+    name: '考试系统',
+    meta: {
+      requireAuth: true,  //添加该字段，表示进入这个路由需要登录
+    },
+    // component: xuexi,
+    component: resolve => require(['../view/index/xuexi/kaoshi.vue'],resolve),
+    children: [ //子路由
+        { path:'/index/xuexi/kaoshi/ksTest', component:ksTest, name:'考试试题' },
+      ]
   }, {
     path: '/news',
     name: '新闻',

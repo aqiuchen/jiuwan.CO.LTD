@@ -15,28 +15,30 @@
     <div class="now_hot">
       <!-- 标题栏 -->
       <div class="now_hot_top">
-        <h5>今日热点</h5>
-        <router-link to="/music">更多热点</router-link>
+        <!-- <h5>今日热点</h5> -->
+        <!-- <router-link to="/music">更多热点</router-link> -->
       </div>
       <!-- 热点列表 -->
       <div class="now_hot_main">
-        <!-- 绑定数据用于请求数据失败时接收失败提示！ -->
-        {{hotsErr}}
-        <router-link class="now_hot_list" v-for="(hot,index) in hots" :to="hot.hotPath" :key="index">
-          <!-- 封面 -->
-          <div class="hot_list_content">
-            <!-- 浮层 -->
-            <div class="hot_list_top">
-              <img :src="hot.topImg" alt="" v-if="isHot" class="list_top_one">
-              <i>万</i>
-              <span>{{hot.hotNumber}}</span>
-              <img src="../../../static/images/home/home-wdsc.png" alt="" class="list_top_two">
-            </div>
-            <img :src="hot.hotImg" alt="">
+        <!-- 告示 -->
+        <div class="index_gaoshi">
+          <div class="index_gaoshi_top">
+            <h5>告示</h5>
           </div>
-          <!-- 标题 -->
-          <div class="hot_list_title">{{hot.hotTitle}}</div>
-        </router-link>
+          <p>嘿~ <span>{{userName}}</span></p>
+          <p>欢迎来到九湾科技app</p>
+          <p>在使用前，请看看这里，这里有关于app的介绍，让你能更快地上手。</p>
+          <p>app主业务分为三大板块：新闻、音乐、视频。</p>
+          <p>目前实现的功能有：</p>
+          <p><b>登录：</b>部分功能需要登录权限，请输入有效手机号码，验证码为 123456 登录即可。</p>
+          <p><b>首页：</b>签到：只实现了模拟签到功能。重点推荐：学习功能中目前已将考试系统打通，计分功能还未实现，这将是最近的重点工作，待学习板块开发完毕，将是提升前端程序员的一个好方法，敬请期待！</p>
+          <p><b>新闻：</b>可阅读新闻内容、点赞。</p>
+          <p><b>音乐：</b>每日推荐中实现了播放音乐功能，包含切歌、播放完自动播放下一首。由于服务器带宽和容量限制，目前只存放了两首音乐且加载速度较慢，需耐心等待，后期将会考虑优化，排行榜实现了榜单展示功能。</p>
+          <p><b>视频：</b>还是受限于服务器容量，视频目前没做上传，只做了布局。</p>
+          <p>还有一些页面小功能也已实现，这里就不详细说明，更多功能请自行体验吧。</p>
+          <p>最后还要感谢老王的服务器，老王是个好人！</p>
+          <p>如果感兴趣请联系我吧：<i>QQ 534613678</i></p>
+        </div>
       </div>
     </div>
   </div>
@@ -46,6 +48,7 @@
   export default {
     data() {
       return {
+        userName: '',
         mods: [{
           modPath: '/index/qiandao',
           modImg: require('../../../static/images/index/index_qd.png'),
@@ -92,19 +95,13 @@
     },
     // 生命周期钩子函数 （载入后）
     mounted() {
-      //使用axios请求数据
-      {
-        const that = this;
-        // that.axios.get('http://localhost:8081/static/aq.json')
-        // that.axios.get('http://172.20.10.3:8081/static/aq.json')
-        that.axios.get('https://mi.dyfeiyu.com/static/aq.json')
-          .then(response => {
-            that.hots = response.data.hots;
-          })
-          .catch(error => {
-            that.hotsErr = "请求数据失败！"
-          })
-      }
+      // 获取登录信息
+      let info = JSON.parse(localStorage.getItem('account'));
+      if (info == null || info == undefined || info == ' ') {
+        this.userName = '未登录';
+      } else {
+        this.userName = info.phoneNumber;
+      };
     },
     // 生命周期钩子函数 （更新前）
     beforeUpdate() {

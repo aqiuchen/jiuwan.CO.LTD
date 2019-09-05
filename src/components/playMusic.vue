@@ -18,14 +18,14 @@
         <!-- 音频/音频格式 -->
         <!-- 按钮信息 -->
         <div class="playMusic_btn">
-          <img src="../../static/images/music/pmBefore.png" alt="上一曲" @click="pmBefore">
-          <img src="../../static/images/music/pmStop.png" alt="暂停" @click="pmPlay" v-show="musicStop">
-          <img src="../../static/images/music/pmPlay.png" alt="播放" @click="pmPlay" v-show="musicPlay">
-          <img src="../../static/images/music/pmAfter.png" alt="下一曲" @click="pmAfter">
-          <img src="../../static/images/music/pmMore.png" alt="更多" @click="pmMore">
+          <img src="../../static/images/music/pmBefore.png" alt="上一曲" @click="btnBefore">
+          <img src="../../static/images/music/pmStop.png" alt="暂停" @click="btnPlay" v-show="musicStop">
+          <img src="../../static/images/music/pmPlay.png" alt="播放" @click="btnPlay" v-show="musicPlay">
+          <img src="../../static/images/music/pmAfter.png" alt="下一曲" @click="btnAfter">
+          <img src="../../static/images/music/pmMore.png" alt="更多" @click="btnMore">
         </div>
       </div>
-      <audio :src="musicFrom" id="audio" autoplay controls v-show="isAudio" loop></audio>
+      <audio :src="musicFrom" id="audio" controls autoplay v-show="isAudio"></audio>
     </div>
   </div>
 </template>
@@ -43,72 +43,66 @@
       }
     },
     mounted() {
-
+      // this.musicPlays = this.$store.state.musicPlay;
     },
     computed: {
       ...mapState({
-        musicList: state => state.musicList,
-        musicImg: state => state.musicImg,
-        musicTitle: state => state.musicTitle,
-        musicFrom: state => state.musicFrom,
-        musicStop: state => state.musicStop,
-        musicPlay: state => state.musicPlay,
-        isanimationMusic: state => state.isanimationMusic,
-        istransformMusic: state => state.istransformMusic,
-
-      }),
-      // 获取底部播放暂停按钮的状态，用于监听判断
-      audioPlays() {
-        let musicPlay = this.$store.state.musicPlay;
-        return musicPlay;
-      }
+        musicList: state => state.music.musicList,
+        musicImg: state => state.music.musicImg,
+        musicTitle: state => state.music.musicTitle,
+        musicFrom: state => state.music.musicFrom,
+        musicId: state => state.music.tjgqId,
+        musicStop: state => state.music.musicStop,
+        musicPlay: state => state.music.musicPlay,
+        isanimationMusic: state => state.music.isanimationMusic,
+        istransformMusic: state => state.music.istransformMusic,
+      })
     },
     methods: {
       // 上一曲
-      pmBefore() {
+      btnBefore() {
         // 调用store中的方法
         this.$store.commit('beforeMusic');
         // 调用css动画
         this.$store.commit('musicTitle');
       },
-      // 播放/暂停
-      pmPlay() {
+      // 播放/暂停按钮
+      btnPlay() {
         // 调用store中的方法
         this.$store.commit('btnMusic');
         // 调用css动画
         this.$store.commit('musicTitle');
-
+        this.playPause();
+      },
+      //播放暂停歌曲
+      playPause(){
+        let audio = document.querySelector('#audio');
+        let musicPlay = this.$store.state.music.musicPlay;
+        if(musicPlay){
+          audio.play();
+          // 监听是否播放完毕
+          audio.addEventListener("ended",()=>{
+            // 调用自动播放下一首
+            this.$store.commit('lastMusic');
+          },false)
+        }else{
+          audio.pause();
+        }
       },
       // 下一曲
-      pmAfter() {
+      btnAfter() {
         // 调用store中的方法
         this.$store.commit('afterMusic');
         // 调用css动画
         this.$store.commit('musicTitle');
       },
       // 更多
-      pmMore() {
+      btnMore() {
         console.log("更多");
       }
     },
     watch: {
-      // 监听播放暂停按钮状态，根据状态调用播放暂停事件
-      audioPlays: {
-        handler(audioPlays){
-          let audio = document.querySelector('#audio');
-          console.log(audioPlays);
-          if (audioPlays) {
-            audio.play();
-            console.log("开始播放");
-          } else {
-            audio.pause();
-            console.log("暂停播放");
-          }
-          // this.musicEnded();
-        },
-        // immediate: true,
-        // deep: true
-      }
+
     }
   }
 </script>
@@ -128,6 +122,13 @@
   }
 
   .playMusic audio {
+    width: 6rem;
+    /* position: absolute; */
+    top: 0;
+    opacity: 0.1;
+  }
+
+  .playMusic iframe {
     width: 6rem;
     /* position: absolute; */
     top: 0;

@@ -14,14 +14,13 @@ module.exports = {
 
     // Various Dev Server settings
     // host: 'localhost',
-    // host: '192.168.0.100',
-    host: 'mi.dyfeiyu.com',
+    host: '192.168.1.6',
+    // host: 'mi.dyfeiyu.com',
     port: 8081,
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
-
 
     /**
      * Source Maps

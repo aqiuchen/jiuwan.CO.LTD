@@ -76,9 +76,9 @@
     },
     mounted() {
       const that = this;
-      // that.axios.get('http://localhost:8081/static/aq.json')
+      that.axios.get('http://localhost:8081/static/aq.json')
       // that.axios.get('http://172.20.10.3:8081/static/aq.json')
-      that.axios.get('https://mi.dyfeiyu.com/static/aq.json')
+      // that.axios.get('https://mi.dyfeiyu.com/static/aq.json')
         .then(res => {
           // 获取通过路由传递的id
           let newsmainId = that.$route.query.Id;

@@ -56,63 +56,40 @@
   justify-content: space-between;
 	flex-wrap: wrap;
 }
-.now_hot_list{
-	width: 2.1rem;
-	margin: 0.2rem 0 0 0;
+.index_gaoshi{
+  /* border: 0.02rem solid #42B983; */
+  box-shadow: 0 0 0.1rem #999999;
+  border-radius: 0.1rem;
+  padding: 0.1rem;
+  font-size: 0.28rem;
 }
-/*封面*/
-.hot_list_content{
-	position: relative;
+.index_gaoshi_top{
+  text-align: center;
+  margin-bottom: 0.2rem;
 }
-.hot_list_content>img{
-	width: 2.1rem;
-	height: 2.1rem;
-	border-radius: 0.1rem;
+.index_gaoshi_top h5{
+  /* display: block; */
+  width: 1.5rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  margin: -0.4rem auto 0;
+  background-color: white;
+  font-size: 0.32rem;
+  box-shadow: 0 0 0.1rem #999999;
+  border-radius: 0.05rem;
+  color: #333;
 }
-/*浮层*/
-.hot_list_top{
-	width: 98%;
-	padding: 0 2% 0 0;
-	height: 0.4rem;
-	position: absolute;
-	font-size: 0.2rem;
-	color: white;
-	overflow: hidden;
+.index_gaoshi p{
+  line-height: 0.5rem;
+  text-align: justify;
 }
-.hot_list_top .list_top_one{
-	width: 0.4rem;
-	height: 0.4rem;
+.index_gaoshi b{
+  font-size: 0.3rem;
 }
-.hot_list_top .list_top_two{
-	width: 0.24rem;
-	height: 0.24rem;
-	float: right;
-	margin: 0.08rem 0;
+.index_gaoshi span{
+  color: red;
+  text-decoration: underline;
 }
-.hot_list_top span{
-	height: 0.4rem;
-	line-height: 0.4rem;
-	float: right;
-	margin: 0 0.02rem;
-	font-weight: bold;
-}
-.hot_list_top i{
-	height: 0.4rem;
-	line-height: 0.4rem;
-	font-style: normal;
-	float: right;
-}
-/*标题*/
-.hot_list_title{
-	width: 100%;
-	color: #333;
-	font-size: 0.28rem;
-	/*控制只显示2行，多的用省略号*/
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-	margin: 0.1rem 0;
-	text-align: justify;
+.index_gaoshi i{
+  color: #42B983;
 }

@@ -112,12 +112,12 @@
   }
   .myfankui_main button{
     width: 80%;
-    height: 0.9rem;
-    line-height: 0.9rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
     background-color: #42B983;
     color: white;
     border: none;
     border-radius: 0.1rem;
-    font-size: 0.4rem;
+    font-size: 0.36rem;
   }
 </style>

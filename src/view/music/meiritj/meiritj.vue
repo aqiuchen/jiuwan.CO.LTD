@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <play-music v-if="isplayMusic"></play-music>
+    <play-music v-show="isplayMusic" ref="childPlay"></play-music>
   </div>
 </template>
 
@@ -46,9 +46,9 @@
     mounted() {
       this.homeTitle = this.$route.query.title;
       this.axios({
-        // url: 'http://localhost:8081/static/aq.json',
-        // url: 'http://192.168.0.100:8081/static/aq.json',
-        url: 'https://mi.dyfeiyu.com/static/aq.json',
+        url: 'http://localhost:8081/static/aq.json',
+        // url: 'http://192.168.1.6:8081/static/aq.json',
+        // url: 'https://mi.dyfeiyu.com/static/aq.json',
         method: 'GET'
       }).then(res => {
         let datas = res.data.musicList;
@@ -93,6 +93,8 @@
         this.$store.commit('bfMusic', index);
         // 调用css动画
         this.$store.commit('musicTitle');
+        // 调用子组件的播放方法
+        this.$refs.childPlay.playPause();
       },
       // 当前歌曲更多操作
       bfMore(index) {

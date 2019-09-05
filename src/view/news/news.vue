@@ -55,9 +55,9 @@ news.vue<template>
       //使用axios请求数据
       {
         this.axios({
-          // url: 'http://localhost:8081/static/aq.json',
+          url: 'http://localhost:8081/static/aq.json',
           // url: 'http://172.20.10.3:8081/static/aq.json',
-          url: 'https://mi.dyfeiyu.com/static/aq.json',
+          // url: 'https://mi.dyfeiyu.com/static/aq.json',
           method: 'GET',
         }).then( response => {
           this.newsr = response.data.newsr;

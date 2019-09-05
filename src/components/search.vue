@@ -87,7 +87,7 @@ export default{
 <style>
 .vueone_search{
     width: 92%;
-    height: 0.8rem;
+    height: 0.7rem;
     padding: 0.2rem 4%;
     position: fixed;
     display: flex;
@@ -97,13 +97,13 @@ export default{
     border-bottom: 0.02rem solid #dddddf;
 }
 .search_img img{
-    width: 0.6rem;
-    height: 0.6rem;
+    width: 0.5rem;
+    height: 0.5rem;
     margin: 0.1rem 0;
 }
 .search_input{
     width: 70%;
-    height: 0.8rem;
+    height: 0.7rem;
     border-radius: 0.2rem;
     text-align: center;
     border: none;
@@ -119,6 +119,6 @@ export default{
     color: white;
     font-size: 0.3rem;
     outline: none;
-    margin: 0.1rem 0;
+    margin: 0.05rem 0;
 }
 </style>

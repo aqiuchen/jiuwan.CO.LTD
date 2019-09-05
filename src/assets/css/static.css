@@ -23,8 +23,8 @@ input[type="button"], input[type="submit"], input[type="reset"] {
   -webkit-appearance: none;
 }
 input,button{
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
-  -webkit-appearance: none;
+/*  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-appearance: none; */
   /*去掉默认点击边框*/
   outline: none;
 }
